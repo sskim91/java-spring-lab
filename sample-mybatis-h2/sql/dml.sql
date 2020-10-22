@@ -1,0 +1,1 @@
+insert into board_tbl(title, content, regdate) values ('제목', '내용', new Date())

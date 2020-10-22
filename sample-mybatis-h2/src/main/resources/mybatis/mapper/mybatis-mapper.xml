@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sample.mybatis.mapper.MyBatisSampleMapper">
+
+    <select id="getTime" resultType="string">
+        select CURRENT_TIME
+    </select>
+
+    <select id="getInt" resultType="int">
+        select 2
+    </select>
+
+    <select id="getBoardAll" resultType="com.sample.mybatis.domain.BoardVO">
+        select * from board_tbl
+    </select>
+
+    <select id="getBoardByBno" resultType="com.sample.mybatis.domain.BoardVO">
+        select * from board_tbl where bno = #{bno}
+    </select>
+
+    <insert id="insertBoard">
+        insert into board_tbl(title, content, regdate)
+        values (#{title}, #{content}, #{regdate})
+    </insert>
+
+</mapper>
