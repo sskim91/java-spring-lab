@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CKEDITOR4</title>
+    <script type="text/javascript" th:src="@{/jquery-3.5.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/ckeditor4/ckeditor.js}"></script>
+</head>
+<body>
+<h1>CKEDITOR4 TEST</h1>
+<textarea name="" id="ckeditor_test" cols="30" rows="10"></textarea>
+</body>
+
+<script>
+	CKEDITOR.replace("ckeditor_test", {
+		height: 400,
+		extraPlugins: 'image2',
+		uploadUrl: "/image/drag",
+		filebrowserImageUploadUrl: '/image/upload', //이미지 업로드 기능을 추가하기위한 코드
+	});
+	// $(document).ready(function (event) {
+	// 	console.log(event);
+	// 	CKEDITOR.replace("ckeditor_test", {
+	// 		extraPlugins: 'image2',
+	// 		uploadUrl: "/image/drag",
+	// 		filebrowserImageUploadUrl: '/image/upload', //이미지 업로드 기능을 추가하기위한 코드
+	// 	});
+	// });
+</script>
+</html>
