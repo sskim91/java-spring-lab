@@ -103,6 +103,8 @@ public class UploadController {
 
         File imgFile = new File(uploadFolder + regDate, ckUploadFileName);
 
+        log.info("imgFile = " + imgFile);
+
         //사진 이미지 찾지 못하는 경우 예외처리로 빈 이미지 파일을 설정한다.
         if (imgFile.isFile()) {
             byte[] buf = new byte[1024];
