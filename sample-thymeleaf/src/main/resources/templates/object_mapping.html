@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="./header.html :: fragment-header"></head>
+    <body>
+        <h1>Thymeleaf 예제</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>이름</th>
+                <th>가격</th>
+                <th>등록날짜</th>
+            </tr>
+            <tr>
+                <td th:text="${productVO.name}"></td>
+                <td th:text="${productVO.price}"></td>
+                <td th:text="${productVO.regDate}"></td>
+            </tr>
+        </table>
+
+    </body>
+</html>

@@ -13,42 +13,16 @@ import java.util.Date;
 @Controller
 public class SampleController {
 
-    @GetMapping("/ex1")
+    @GetMapping("/ex01")
     public String ex1(Model model) {
         ProductVO productVO = ProductVO.builder()
                 .price(10000)
-                .description("상품A")
-                .availableFrom(new Date())
+                .name("상품A")
+                .regDate(new Date())
                 .build();
 
         model.addAttribute("productVO", productVO);
 
-        return "ex01_bean_values";
-    }
-
-    @GetMapping("/ex2")
-    public String ex2(Model model) {
-        ProductVO productVO = ProductVO.builder()
-                .price(10000)
-                .description("상품A")
-                .availableFrom(new Date())
-                .build();
-
-        model.addAttribute("productVO", productVO);
-
-        return "ex02_simple_formatting";
-    }
-
-    @GetMapping("/ex3")
-    public String ex3(Model model) {
-        ProductVO productVO = ProductVO.builder()
-                .price(10000)
-                .description("상품A")
-                .availableFrom(new Date())
-                .build();
-
-        model.addAttribute("productVO", productVO);
-
-        return "ex03_string_concatenation";
+        return "object_mapping";
     }
 }

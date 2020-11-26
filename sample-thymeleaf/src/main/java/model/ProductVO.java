@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 @Builder
 public class ProductVO {
-    private String description;
+    private String name;
     private int price;
-    private Date availableFrom;
+    private Date regDate;
 }
