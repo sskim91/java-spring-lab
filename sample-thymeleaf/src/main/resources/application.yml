@@ -7,3 +7,6 @@ spring:
         enabled: true
   thymeleaf:
     cache: false
+
+server:
+  port: 9090

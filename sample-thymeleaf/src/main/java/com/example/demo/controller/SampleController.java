@@ -73,4 +73,26 @@ public class SampleController {
 
         return "map_list_view";
     }
+
+    @GetMapping("/ex05")
+    public String ex05(Model model) {
+
+        List<Map<String, ProductVO>> mapList = new ArrayList<>();
+
+        Map<String, ProductVO> fakeData = new LinkedHashMap<>();
+        fakeData.put("testA", new ProductVO("상품A", 10000, new Date()));
+        fakeData.put("testB", new ProductVO("상품B", 5000, new Date()));
+        fakeData.put("testC", new ProductVO("상품C", 1000, new Date()));
+        mapList.add(fakeData);
+        fakeData.clear();
+        fakeData.put("testA", new ProductVO("상품A", 10000, new Date()));
+        fakeData.put("testB", new ProductVO("상품B", 5000, new Date()));
+        fakeData.put("testC", new ProductVO("상품C", 1000, new Date()));
+
+        mapList.add(fakeData);
+
+        model.addAttribute("mapList", mapList);
+
+        return "list_map_view";
+    }
 }
