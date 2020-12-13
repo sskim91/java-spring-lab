@@ -63,4 +63,51 @@ public class StringUtilTests {
     void trimTrailingCharacterTest() throws Exception{
         assertThat(StringUtils.trimTrailingCharacter("01012345678-", '-')).isEqualTo("01012345678");
     }
+
+    @Test
+    @DisplayName("matchesCharacter 테스트")
+    void matchesCharacterTest() throws Exception{
+        assertThat(StringUtils.matchesCharacter("sskim", 's')).isFalse();
+    }
+
+    @Test
+    @DisplayName("startsWithIgnoreCase 테스트")
+    void startsWithIgnoreCaseTest() throws Exception{
+        assertThat(StringUtils.startsWithIgnoreCase("Hello, How are you", "HELLO")).isTrue();
+        assertThat(StringUtils.startsWithIgnoreCase("Hello, How are you", "YOU")).isFalse();
+    }
+
+    @Test
+    @DisplayName("endsWithIgnoreCase 테스트")
+    void endsWithIgnoreCaseTest() throws Exception{
+        assertThat(StringUtils.endsWithIgnoreCase("Hello, How are you", "YOU")).isTrue();
+        assertThat(StringUtils.endsWithIgnoreCase("Hello, How are you", "HELLO")).isFalse();
+    }
+
+    @Test
+    @DisplayName("countOccurrencesOf 테스트")
+    void countOccurrencesOf() throws Exception{
+        String str = "Hello, How are you? Fine Thank you h";
+        assertThat(StringUtils.countOccurrencesOf(str, "H")).isEqualTo(2);
+        assertThat(StringUtils.countOccurrencesOf(str, ",")).isEqualTo(1);
+        assertThat(StringUtils.countOccurrencesOf(str, "y")).isEqualTo(2);
+    }
+
+    @Test
+    @DisplayName("getFilename 테스트")
+    void getFilenameTest() throws Exception{
+        assertThat(StringUtils.getFilename("mypath/myfile.txt")).isEqualTo("myfile.txt");
+    }
+
+    @Test
+    @DisplayName("getFilenameExtension 테스트")
+    void getFilenameExtensionTest() throws Exception{
+        assertThat(StringUtils.getFilenameExtension("mypath/myfile.txt")).isEqualTo("txt");
+    }
+
+    @Test
+    @DisplayName("stripFilenameExtension 테스트")
+    void stripFilenameExtensionTest() throws Exception{
+        assertThat(StringUtils.stripFilenameExtension("mypath/myfile.txt")).isEqualTo("mypath/myfile");
+    }
 }
