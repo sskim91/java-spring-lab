@@ -30,8 +30,6 @@ public class RestTemplateController {
 
         ResponseEntity<Object> exchange = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Object.class);
 
-        String forObject = restTemplate.getForObject(uri.toString(), String.class);
-        System.out.println("forObject = " + forObject);
         System.out.println("exchange = " + exchange);
 
         HttpStatus statusCode = exchange.getStatusCode();   //상태코드확인
