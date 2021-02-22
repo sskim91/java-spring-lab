@@ -1,11 +1,18 @@
 package com.example.resttemplate.Controller;
 
-import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author sskim
@@ -20,22 +27,74 @@ public class RestTemplateController {
     }
 
     @GetMapping("/resttemplate")
-    public ResponseEntity<Object> restTemplateTest() {
+    public ResponseEntity<List<Map<String, Object>>> restTemplateTest() {
 
         HttpHeaders header = new HttpHeaders();
         HttpEntity<?> entity = new HttpEntity<>(header);
 
         String url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
-        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url + "?" + "key=799f23355d82c9c14f5e42bbf848130b&targetDt=20210201").build();
+        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url)
+                .queryParam("key", "799f23355d82c9c14f5e42bbf848130b")
+                .queryParam("targetDt", "20210201")
+                .build();
 
-        ResponseEntity<Object> exchange = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Object.class);
+        ResponseEntity<Map> resultMap = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Map.class);
 
-        System.out.println("exchange = " + exchange);
+        LinkedHashMap boxOfficeResult = (LinkedHashMap) resultMap.getBody().get("boxOfficeResult");
 
-        HttpStatus statusCode = exchange.getStatusCode();   //상태코드확인
-        HttpHeaders headers = exchange.getHeaders();    //헤더정보확인
-        Object body = exchange.getBody();   //바디정보확인
+        List<Map<String, Object>> resultDTO = (List<Map<String, Object>>) boxOfficeResult.get("dailyBoxOfficeList");
 
-        return exchange;
+        return ResponseEntity.ok(resultDTO);
+    }
+
+    @GetMapping("/resttemplateAll")
+    public ResponseEntity<Map> restTemplateAllTest() {
+
+        HttpHeaders header = new HttpHeaders();
+        HttpEntity<?> entity = new HttpEntity<>(header);
+
+        String url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url)
+                .queryParam("key", "799f23355d82c9c14f5e42bbf848130b")
+                .queryParam("targetDt", "20210201")
+                .build();
+
+        ResponseEntity<Map> resultMap = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Map.class);
+
+        return resultMap;
+    }
+
+    //영화인 검색
+    @GetMapping("/searchpeopleInfo")
+    public ResponseEntity<Map> searchpeopleInfo() {
+        HttpHeaders header = new HttpHeaders();
+        HttpEntity<?> entity = new HttpEntity<>(header);
+
+        String url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleInfo.json";
+        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url)
+                .queryParam("key", "799f23355d82c9c14f5e42bbf848130b")
+                .queryParam("peopleCd", "10055626")
+                .build();
+
+        ResponseEntity<Map> resultMap = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Map.class);
+
+        return resultMap;
+    }
+
+    //영화사 상세정보
+    @GetMapping("/searchCompanyInfo")
+    public ResponseEntity<Map> searchCompanyInfo() {
+        HttpHeaders header = new HttpHeaders();
+        HttpEntity<?> entity = new HttpEntity<>(header);
+
+        String url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/company/searchCompanyInfo.json";
+        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url)
+                .queryParam("key", "799f23355d82c9c14f5e42bbf848130b")
+                .queryParam("companyCd", "20063188")
+                .build();
+
+        ResponseEntity<Map> resultMap = restTemplate.exchange(uri.toString(), HttpMethod.GET, entity, Map.class);
+
+        return resultMap;
     }
 }

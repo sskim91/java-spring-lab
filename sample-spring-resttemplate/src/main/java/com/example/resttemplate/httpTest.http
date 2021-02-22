@@ -1,0 +1,16 @@
+GET http://localhost:8080/searchCompanyInfo
+Accept: application/json
+
+###
+GET http://localhost:8080/searchpeopleInfo
+Accept: application/json
+
+###
+GET http://localhost:8080/resttemplate
+Accept: application/json
+
+###
+GET http://localhost:8080/resttemplateAll
+Accept: application/json
+
+###
