@@ -16,9 +16,7 @@ public enum PaymentGroup {
     ETC("기타", new PaymentOption[]{
             PaymentOption.POINT, PaymentOption.COUPON
     }),
-    EMPTY("없음", new PaymentOption[]{
-            PaymentOption.POINT, PaymentOption.COUPON
-    });
+    EMPTY("없음", new PaymentOption[]{});
 
     private String viewName;
     private PaymentOption[] containPayment;
