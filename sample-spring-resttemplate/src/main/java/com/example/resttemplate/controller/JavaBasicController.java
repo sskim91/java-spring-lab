@@ -1,4 +1,4 @@
-package com.example.resttemplate.Controller;
+package com.example.resttemplate.controller;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

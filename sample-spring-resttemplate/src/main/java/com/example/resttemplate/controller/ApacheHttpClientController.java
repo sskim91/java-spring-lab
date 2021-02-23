@@ -1,4 +1,4 @@
-package com.example.resttemplate.Controller;
+package com.example.resttemplate.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpEntity;

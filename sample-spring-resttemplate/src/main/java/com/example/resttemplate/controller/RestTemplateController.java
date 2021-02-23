@@ -1,4 +1,4 @@
-package com.example.resttemplate.Controller;
+package com.example.resttemplate.controller;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
