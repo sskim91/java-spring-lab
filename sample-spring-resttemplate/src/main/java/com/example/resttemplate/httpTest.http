@@ -1,3 +1,11 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
 GET http://localhost:8080/searchCompanyInfo
 Accept: application/json
 
@@ -5,12 +13,12 @@ Accept: application/json
 GET http://localhost:8080/searchpeopleInfo
 Accept: application/json
 
-###
-GET http://localhost:8080/resttemplate
+###돌발정보 데이터 URL
+GET http://www.utic.go.kr/guide/imsOpenData.do?key=0jxNFa4ug1azDREAKrI8eptlsbqEpifpq3ctxuXyVfC7UNsAXns7Gm8ncJjep
 Accept: application/json
 
-###
-GET http://localhost:8080/resttemplateAll
+### 소통정보 데이터 URL
+GET http://www.utic.go.kr/etc/telMap.do?key=0jxNFa4ug1azDREAKrI8eptlsbqEpifpq3ctxuXyVfC7UNsAXns7Gm8ncJjep
 Accept: application/json
 
 ###
