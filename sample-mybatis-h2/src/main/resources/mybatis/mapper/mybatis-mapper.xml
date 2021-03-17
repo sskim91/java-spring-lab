@@ -5,6 +5,14 @@
 
 <mapper namespace="com.sample.mybatis.mapper.MyBatisSampleMapper">
 
+    <resultMap id="boardResultMap" type="com.sample.mybatis.domain.BoardVO">
+		<result column="BNO" property="bno" />
+		<result column="TITLE" property="title" />
+		<result column="CONTENT" property="content"/>
+		<result column="REGDATE" property="regdate" />
+        <result column="BTYPE" property="btype" javaType="com.sample.mybatis.enums.BoardType" jdbcType="VARCHAR" typeHandler="com.sample.mybatis.enums.BoardType$TypeHandler"/>
+	</resultMap>
+
     <select id="getTime" resultType="string">
         select CURRENT_TIME
     </select>
@@ -13,17 +21,35 @@
         select 2
     </select>
 
-    <select id="getBoardAll" resultType="com.sample.mybatis.domain.BoardVO">
-        select * from board_tbl
+    <select id="getBoardAll" resultMap="boardResultMap">
+        select
+            BNO,
+            TITLE,
+            CONTENT,
+            REGDATE,
+            BTYPE
+        from board_tbl
     </select>
 
-    <select id="getBoardByBno" resultType="com.sample.mybatis.domain.BoardVO">
-        select * from board_tbl where bno = #{bno}
+    <select id="getBoardByBno" resultMap="boardResultMap">
+        select
+            bno,
+            title,
+            content,
+            regdate,
+            btype
+        from board_tbl
+        where bno = #{bno}
     </select>
 
     <insert id="insertBoard">
-        insert into board_tbl(title, content, regdate)
-        values (#{title}, #{content}, #{regdate})
+        insert into board_tbl(title, content, regdate, btype)
+        values (
+                #{title},
+                #{content},
+                #{regdate},
+                #{btype, jdbcType=VARCHAR, typeHandler=com.sample.mybatis.enums.BoardType$TypeHandler}
+                )
     </insert>
 
 </mapper>
