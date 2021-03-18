@@ -23,6 +23,11 @@ public class MainApp {
             System.out.println("value = " + value);
         }
 
+        BoardType free = Enum.valueOf(BoardType.class, "FREE");
+        System.out.println("free.getCode() = " + free.getCode());
+        System.out.println("free.name() = " + free.name());
+        System.out.println("free.getViewName() = " + free.getViewName());
+
         System.out.println(EnumUtils.getCodeEnum(BoardType.class, "1"));
     }
 }

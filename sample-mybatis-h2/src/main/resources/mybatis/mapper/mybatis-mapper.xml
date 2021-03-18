@@ -6,7 +6,7 @@
 <mapper namespace="com.sample.mybatis.mapper.MyBatisSampleMapper">
 
     <resultMap id="boardResultMap" type="com.sample.mybatis.domain.BoardVO">
-		<result column="BNO" property="bno" />
+		<id column="BNO" property="bno" />
 		<result column="TITLE" property="title" />
 		<result column="CONTENT" property="content"/>
 		<result column="REGDATE" property="regdate" />
