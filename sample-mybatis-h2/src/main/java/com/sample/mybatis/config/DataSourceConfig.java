@@ -34,7 +34,7 @@ public class DataSourceConfig {
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sessionFactoryBean.setDataSource(dataSource);
 //        sessionFactoryBean.setTypeAliasesPackage(MyBatisProperties.TYPE_ALIASES_PACKAGE);
-//        sessionFactoryBean.setConfigLocation(resolver.getResource("classpath:/mybatis/MyBatisConfig.xml"));
+        sessionFactoryBean.setConfigLocation(resolver.getResource("classpath:/mybatis/config/mybatis-config.xml"));
         sessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mybatis/mapper/*mapper.xml"));
 //        sessionFactoryBean.setTypeHandlers(new TypeHandler[]{});
         sessionFactoryBean.setTypeHandlersPackage("com.sample.mybatis.enums");
