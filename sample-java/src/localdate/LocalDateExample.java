@@ -22,10 +22,10 @@ public class LocalDateExample {
 //        System.out.println("=========================================");
 //        printAllLocalTime();
 //        System.out.println("=========================================");
-//        printAllLocalDateTime();
+        printAllLocalDateTime();
 //        System.out.println("=========================================");
 //        printAllZonedDateTime();
-        printAllInstant();
+//        printAllInstant();
 
 //        BetweenDays();
     }
@@ -112,6 +112,12 @@ public class LocalDateExample {
         System.out.println("nowLocalDateTime = " + nowLocalDateTime);
         System.out.println("기존 LocalDate와 LocalTime이 제공하는 메서드를 모두 사용할 수 있다.");
 
+        //LocalDateTime을 LocalDate 또는 LocalTime으로 변환 하는 방법
+        LocalDate localDate = targetLocalDateTime.toLocalDate();
+        LocalTime localTime = targetLocalDateTime.toLocalTime();
+
+        System.out.println("localDate = " + localDate);
+        System.out.println("localTime = " + localTime);
     }
 
 

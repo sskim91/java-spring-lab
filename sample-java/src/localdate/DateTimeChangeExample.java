@@ -2,6 +2,7 @@ package localdate;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 
 /**
@@ -47,5 +48,13 @@ public class DateTimeChangeExample {
         System.out.println("돌아오는 월요일 = " + targetDateTime);
         targetDateTime = now.with(TemporalAdjusters.previous(DayOfWeek.MONDAY));
         System.out.println("지난 월요일 = " + targetDateTime);
+
+        //TemporalAdjuster직접 구현하기
+        targetDateTime = now.with(new CustomDayAfterTomorrow());
+        System.out.println("TemporalAdjuster 직접 구현 = " + targetDateTime);
+
+        //람다
+        targetDateTime = now.with(temporal -> temporal.plus(2, ChronoUnit.DAYS));
+        System.out.println("TemporalAdjuster 람다 = " + targetDateTime);
     }
 }
