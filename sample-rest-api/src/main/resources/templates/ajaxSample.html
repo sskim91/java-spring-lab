@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>ajaxSample 테스트</h2>
+
+    <button id="ajaxBtn" class="btn btn-danger">ajaxSample gg</button>
+</div>
+</body>
+<script>
+	$(document).ready(function (e) {
+
+		$("#ajaxBtn").on("click", function () {
+			getSearchList();
+		});
+
+		function requestAjax(options) {
+			if (options) {
+				var reqUrl = options.url || '';
+				$.ajax({
+					url: reqUrl,
+					type: options.type || 'post',
+					data: options.data || {},
+					async: options.isAsync || true,
+					dataType: options.dataType || 'json',
+					processData: options.processData || true,
+					contentType: options.contentType || 'application/json',
+					cache: options.cache || false,
+					success: options.callback,
+                    // success: function (rData){
+	                //     options.callback(rData);
+	                //     console.log("rData",rData);
+                    // },
+					beforeSend: function (xhr) {
+						console.log('beforeSend :: ' + options.url);
+						if (typeof options.beforeSend === 'function') {
+							options.beforeSend();
+						}
+					},
+					complete: function () {
+						console.log('complete :: ' + options.url);
+						if (typeof options.complete === 'function') {
+							options.complete();
+						}
+					},
+					error: options.error || function (xhr) {
+						if (xhr.status === 400) {
+							console.log('입력 값을 확인 해 주세요.');
+						} else if (xhr.status === 401) {
+							console.log('권한이 없습니다.');
+						} else if (xhr.status === 404) {
+							console.log('잘못 된 요청입니다.')
+						} else if (xhr.status === 500) {
+							console.log('서버 오류가 발생하였습니다.')
+						} else {
+							console.log('처리 도중 오류가 발생 하였습니다.')
+						}
+					}
+				});
+			}
+		}
+
+		//목록
+		function getSearchList() {
+			var options = {};
+			var data = {"test": "sampledata"};
+			options.url = '/ajaxSample';
+			options.type = 'post';
+			options.dataType = 'json';
+			options.callback = getSearchListCallback;
+			options.data = JSON.stringify(data);
+			requestAjax(options);
+		}
+
+		function getSearchListCallback(data) {
+			/**
+             * callback
+             * $("#ajaxBtn").on("click", 콜백함수) 로 사용하는 것과 같이
+             * ajax success에서도 options.callback() 말고 options.callback 만 사용해도 된다.
+             * 이해가 안가서 한번 실습으로 해봤는데 이해 되었음.
+			 */
+			console.log("getSearchListCallBack", data);
+		}
+	});
+</script>
+
+</html>
