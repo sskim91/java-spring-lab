@@ -2,9 +2,14 @@
 <html lagn="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
-<head th:replace="fragments/config :: configFragment"></head>
-
+<head>
+    <meta charset="UTF-8" />
+    <!-- 공통으로 쓰이는 css파일을 넣는다.-->
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <!-- 공통으로 쓰이는 js 파일을 넣는다.-->
+    <script th:src="@{js/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{js/bootstrap.min.js}"></script>
+</head>
 <body>
     <!-- header 시작 -->
     <header th:replace="fragments/header :: headerFragment"></header>
