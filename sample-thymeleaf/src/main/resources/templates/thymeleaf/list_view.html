@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layouts/layout}">
+<div layout:fragment="content" class="container">
+    <h1>Thymeleaf 예제</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>이름</th>
+            <th>가격</th>
+            <th>등록날짜</th>
+        </tr>
+        <tr th:each="list : ${productList}">
+            <td th:text="${list.name}"></td>
+            <td th:text="${list.price}"></td>
+            <td th:text="${list.regDate}"></td>
+        </tr>
+    </table>
+</div>
+</html>

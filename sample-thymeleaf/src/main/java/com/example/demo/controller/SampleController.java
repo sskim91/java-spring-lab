@@ -23,7 +23,7 @@ public class SampleController {
 
         model.addAttribute("productVO", productVO);
 
-        return "object_view";
+        return "thymeleaf/object_view";
     }
 
     @GetMapping("/ex02")
@@ -35,7 +35,7 @@ public class SampleController {
         });
         model.addAttribute("productList", productList);
 
-        return "list_view";
+        return "thymeleaf/list_view";
     }
 
     @GetMapping("/ex03")
@@ -48,7 +48,7 @@ public class SampleController {
 
         model.addAttribute("mapList", map);
 
-        return "map_view";
+        return "thymeleaf/map_view";
     }
 
     @GetMapping("/ex04")
@@ -71,7 +71,7 @@ public class SampleController {
 
         model.addAttribute("mapList", map);
 
-        return "map_list_view";
+        return "thymeleaf/map_list_view";
     }
 
     @GetMapping("/ex05")
@@ -93,6 +93,6 @@ public class SampleController {
 
         model.addAttribute("mapList", mapList);
 
-        return "list_map_view";
+        return "thymeleaf/list_map_view";
     }
 }

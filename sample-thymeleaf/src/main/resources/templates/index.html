@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/layout">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css"></th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script th:src="@{js/sample.js}"></script>
+</th:block>
+
+<div layout:fragment="content" class="bg-success m-5">
+    index.html 입니다. 즉 컨텐츠 영역
+</div>
+</html>
