@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="./header.html :: fragment-header"></head>
+    <body class="container">
+    <h3>enum</h3>
+    <form action="">
+        <div class="form-group">
+            <select name="color" class="form-control">
+                <option th:each="colorOpt : ${T(com.example.demo.enums.Color).values()}"
+                        th:value="${colorOpt}" th:text="${colorOpt}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="color" class="form-control">
+                <option th:each="colorOpt : ${T(com.example.demo.enums.Color).values()}"
+                        th:value="${colorOpt}" th:text="${colorOpt.displayValue}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="color" class="form-control">
+                <option th:each="colorOpt : ${T(com.example.demo.enums.Color).values()}"
+                        th:value="${colorOpt.displayValue}" th:text="${colorOpt}"></option>
+            </select>
+        </div>
+
+    </form>
+</body>
+</html>

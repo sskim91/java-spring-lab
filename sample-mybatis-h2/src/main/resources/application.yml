@@ -5,9 +5,27 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: true
 
 # mybatis 설정
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
+    default-enum-type-handler:
+#      - com.sample.mybatis.enums.BoardType.TypeHandler
+#      - com.sample.mybatis.enums.PaymentType.TypeHandler
+  type-handlers-package: com.sample.mybatis.enums
+
+# log
+logging:
+  level:
+    org.hibernate: debug

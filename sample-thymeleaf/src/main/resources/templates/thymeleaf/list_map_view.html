@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layouts/layout}">
+<div layout:fragment="content" class="container">
+    <h1>Thymeleaf 예제</h1>
+    <h3 th:text="${mapList}"></h3>
+    <table class="table table-striped">
+        <tr>
+            <th>No</th>
+            <th>이름</th>
+            <th>가격</th>
+            <th>날짜</th>
+        </tr>
+        <tr th:each="list : ${mapList}">
+            <td th:text="${listStat.count}"></td>
+            <td th:text="${list.testA.name}"></td>
+            <td th:text="${list.testA.price}"></td>
+            <td th:text="${list.testA.regDate}"></td>
+        </tr>
+    </table>
+</div>
+</html>
