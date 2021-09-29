@@ -2,6 +2,7 @@ package com.sample.mybatis.service;
 
 import com.sample.mybatis.domain.BoardVO;
 import com.sample.mybatis.mapper.MyBatisSampleMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,13 +11,10 @@ import java.util.List;
  * @author sskim
  */
 @Service
+@RequiredArgsConstructor
 public class MyBatisSampleService {
 
     private final MyBatisSampleMapper mapper;
-
-    public MyBatisSampleService(MyBatisSampleMapper mapper) {
-        this.mapper = mapper;
-    }
 
     public String getTimeService() {
         return mapper.getTime();

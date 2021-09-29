@@ -1,1 +1,2 @@
-insert into board_tbl(title, content, regdate) values ('제목', '내용', new Date())
+INSERT INTO BOARD_TBL(TITLE, CONTENT, REGDATE)
+VALUES ('제목', '내용', NEW DATE())
