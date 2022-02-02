@@ -1,7 +1,10 @@
 package com.sample.mybatis.mapper;
 
 import com.sample.mybatis.domain.BoardVO;
+import com.sample.mybatis.domain.UserVO;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -20,4 +23,10 @@ public interface MyBatisSampleMapper {
     List<BoardVO> getBoardAll();
 
     BoardVO getBoardByBno(int bno);
+
+    @Insert("insert into user_tbl(type, name) values (#{type}, #{name})")
+    int insertUser(UserVO userVO);
+
+    @Select("select * from user_tbl")
+    List<UserVO> getAllUser();
 }

@@ -16,14 +16,10 @@ spring:
         trace: true
 
 # mybatis 설정
+# 여러개의 TypeHandler 를 등록하려면 결국 config.xml 파일을 이용해야 한다. (여러개의 TypeHandler를 등록하는 옵션이 없다.)
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: true
-    default-enum-type-handler:
-#      - com.sample.mybatis.enums.BoardType.TypeHandler
-#      - com.sample.mybatis.enums.PaymentType.TypeHandler
-  type-handlers-package: com.sample.mybatis.enums
+  config-location: classpath:mybatis/config/mybatis-config.xml
 
 # log
 logging:

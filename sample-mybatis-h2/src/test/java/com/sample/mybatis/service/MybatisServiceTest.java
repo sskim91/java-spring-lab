@@ -1,7 +1,11 @@
 package com.sample.mybatis.service;
 
 import com.sample.mybatis.domain.BoardVO;
+import com.sample.mybatis.domain.UserVO;
 import com.sample.mybatis.enums.BoardType;
+import com.sample.mybatis.enums.UserType;
+import com.sample.mybatis.mapper.MyBatisSampleMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +19,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * @author sskim
  */
+@Slf4j
 @SpringBootTest
 public class MybatisServiceTest {
 
     @Autowired
     MyBatisSampleService service;
+    @Autowired
+    MyBatisSampleMapper mapper;
 
     @Test
     @DisplayName("간단한 시간 가져오기 getTime()")
@@ -66,9 +73,9 @@ public class MybatisServiceTest {
     @DisplayName("board_tbl 전체 가져오기")
     void findAllBoardTest() {
         List<BoardVO> allBoard = service.findAllBoard();
-        for (BoardVO boardVO : allBoard) {
-            System.out.println("boardVO = " + boardVO);
-        }
+        allBoard.forEach(i ->{
+            log.info("========> {}, {}", i.getTitle(), i.getBtype());
+        });
     }
 
     @Test
@@ -77,4 +84,22 @@ public class MybatisServiceTest {
         BoardVO boardByBno = service.findBoardByBno(1);
         assertThat(boardByBno.getTitle()).isEqualTo("제목");
     }
+
+    @Test
+    void USER_입력_테스트() {
+        UserVO userVO = new UserVO();
+        userVO.setName("비회원");
+        userVO.setType(UserType.GUEST);
+        int i = mapper.insertUser(userVO);
+        assertThat(i).isEqualTo(1);
+    }
+
+    @Test
+    void USER_SELECT_TEST() {
+        mapper.getAllUser()
+                .forEach(i -> {
+                    log.info("===> {}, {}, {}", i.getId(), i.getName(), i.getType());
+                });
+    }
+
 }
