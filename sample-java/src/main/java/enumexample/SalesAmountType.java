@@ -12,8 +12,8 @@ public enum SalesAmountType {
     VAT_AMOUNT("부가세액", amount -> Math.round(amount.doubleValue()) / 11),
     NOT_USED("사용안함", amount -> 0L);
 
-    private String viewName;
-    private Function<Long, Long> expression;
+    private final String viewName;
+    private final Function<Long, Long> expression;
 
     SalesAmountType(String viewName, Function<Long, Long> expression) {
         this.viewName = viewName;
