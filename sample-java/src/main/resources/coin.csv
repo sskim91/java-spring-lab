@@ -1,0 +1,282 @@
+market,korean_name,english_name
+KRW-BTC,비트코인,Bitcoin
+KRW-ETH,이더리움,Ethereum
+BTC-ETH,이더리움,Ethereum
+BTC-LTC,라이트코인,Litecoin
+BTC-XRP,리플,Ripple
+BTC-ETC,이더리움클래식,Ethereum Classic
+BTC-OMG,오미세고,OmiseGo
+BTC-CVC,시빅,Civic
+BTC-DGB,디지바이트,DigiByte
+BTC-SC,시아코인,Siacoin
+BTC-SNT,스테이터스네트워크토큰,Status Network Token
+BTC-WAVES,웨이브,Waves
+BTC-NMR,뉴메레르,Numeraire
+BTC-XEM,넴,NEM
+BTC-QTUM,퀀텀,Qtum
+BTC-BAT,베이직어텐션토큰,Basic Attention Token
+BTC-LSK,리스크,Lisk
+BTC-STEEM,스팀,Steem
+BTC-DOGE,도지코인,Dogecoin
+BTC-BNT,뱅코르,Bancor
+BTC-XLM,스텔라루멘,Lumen
+BTC-ARDR,아더,Ardor
+BTC-ARK,아크,Ark
+BTC-STORJ,스토리지,Storj
+BTC-GRS,그로스톨코인,Groestlcoin
+BTC-REP,어거,Augur
+BTC-RLC,아이젝,iEx.ec
+USDT-BTC,비트코인,Bitcoin
+USDT-ETH,이더리움,Ethereum
+USDT-LTC,라이트코인,Litecoin
+USDT-XRP,리플,Ripple
+USDT-ETC,이더리움클래식,Ethereum Classic
+KRW-NEO,네오,NEO
+KRW-MTL,메탈,Metal
+KRW-LTC,라이트코인,Litecoin
+KRW-XRP,리플,Ripple
+KRW-ETC,이더리움클래식,Ethereum Classic
+KRW-OMG,오미세고,OmiseGo
+KRW-SNT,스테이터스네트워크토큰,Status Network Token
+KRW-WAVES,웨이브,Waves
+KRW-XEM,넴,NEM
+KRW-QTUM,퀀텀,Qtum
+KRW-LSK,리스크,Lisk
+KRW-STEEM,스팀,Steem
+KRW-XLM,스텔라루멘,Lumen
+KRW-ARDR,아더,Ardor
+KRW-ARK,아크,Ark
+KRW-STORJ,스토리지,Storj
+KRW-GRS,그로스톨코인,Groestlcoin
+KRW-REP,어거,Augur
+KRW-ADA,에이다,Ada
+BTC-ADA,에이다,Ada
+BTC-MANA,디센트럴랜드,Decentraland
+USDT-OMG,오미세고,OmiseGo
+KRW-SBD,스팀달러,SteemDollars
+BTC-SBD,스팀달러,SteemDollars
+KRW-POWR,파워렛저,Power ledger
+BTC-POWR,파워렛저,Power ledger
+KRW-BTG,비트코인골드,Bitcoin Gold
+USDT-ADA,에이다,Ada
+BTC-DNT,디스트릭트0x,district0x
+BTC-ZRX,제로엑스,0x Protocol
+BTC-TRX,트론,TRON
+BTC-TUSD,트루USD,TrueUSD
+BTC-LRC,루프링,Loopring
+KRW-ICX,아이콘,Icon
+KRW-EOS,이오스,EOS
+USDT-TUSD,트루USD,TrueUSD
+KRW-TRX,트론,TRON
+BTC-POLY,폴리매쓰,Polymath
+USDT-SC,시아코인,Siacoin
+USDT-TRX,트론,TRON
+KRW-SC,시아코인,Siacoin
+KRW-ONT,온톨로지,Ontology
+KRW-ZIL,질리카,Zilliqa
+KRW-POLY,폴리매쓰,Polymath
+KRW-ZRX,제로엑스,0x Protocol
+KRW-LOOM,룸네트워크,Loom Network
+BTC-BCH,비트코인캐시,Bitcoin Cash
+USDT-BCH,비트코인캐시,Bitcoin Cash
+KRW-BCH,비트코인캐시,Bitcoin Cash
+BTC-MFT,메인프레임,Mainframe
+BTC-LOOM,룸네트워크,Loom Network
+KRW-BAT,베이직어텐션토큰,Basic Attention Token
+KRW-IOST,아이오에스티,IOST
+BTC-RFR,리퍼리움,Refereum
+KRW-RFR,리퍼리움,Refereum
+USDT-DGB,디지바이트,DigiByte
+KRW-CVC,시빅,Civic
+KRW-IQ,에브리피디아,Everipedia
+KRW-IOTA,아이오타,IOTA
+BTC-RVN,레이븐코인,Ravencoin
+BTC-GO,고체인,GoChain
+BTC-UPP,센티넬프로토콜,Sentinel Protocol
+BTC-ENJ,엔진코인,Enjin
+KRW-MFT,메인프레임,Mainframe
+KRW-ONG,온톨로지가스,ONG
+KRW-GAS,가스,GAS
+BTC-MTL,메탈,Metal
+KRW-UPP,센티넬프로토콜,Sentinel Protocol
+KRW-ELF,엘프,aelf
+USDT-DOGE,도지코인,Dogecoin
+USDT-ZRX,제로엑스,0x Protocol
+USDT-RVN,레이븐코인,Ravencoin
+USDT-BAT,베이직어텐션토큰,Basic Attention Token
+KRW-KNC,카이버네트워크,Kyber Network
+BTC-MOC,모스코인,Moss Coin
+BTC-ZIL,질리카,Zilliqa
+KRW-BSV,비트코인에스브이,Bitcoin SV
+BTC-BSV,비트코인에스브이,Bitcoin SV
+BTC-IOST,아이오에스티,IOST
+KRW-THETA,쎄타토큰,Theta Token
+BTC-DENT,덴트,Dent
+KRW-QKC,쿼크체인,QuarkChain
+BTC-ELF,엘프,aelf
+KRW-BTT,비트토렌트,BitTorrent
+BTC-IOTX,아이오텍스,IoTeX
+BTC-SOLVE,솔브케어,Solve.Care
+BTC-NKN,엔케이엔,NKN
+BTC-META,메타디움,Metadium
+KRW-MOC,모스코인,Moss Coin
+BTC-ANKR,앵커,Ankr
+BTC-CRO,크로노스,Cronos
+KRW-ENJ,엔진코인,Enjin
+KRW-TFUEL,쎄타퓨엘,Theta Fuel
+KRW-MANA,디센트럴랜드,Decentraland
+KRW-ANKR,앵커,Ankr
+BTC-ORBS,오브스,Orbs
+BTC-AERGO,아르고,Aergo
+KRW-AERGO,아르고,Aergo
+KRW-ATOM,코스모스,Cosmos
+KRW-TT,썬더코어,ThunderCore
+KRW-CRE,캐리프로토콜,Carry Protocol
+BTC-ATOM,코스모스,Cosmos
+BTC-STPT,에스티피,Standard Tokenization Protocol
+KRW-MBL,무비블록,MovieBloc
+BTC-EOS,이오스,EOS
+BTC-LUNA,루나,Luna
+BTC-DAI,다이,Dai
+BTC-MKR,메이커,Maker
+BTC-BORA,보라,BORA
+KRW-WAXP,왁스,WAX
+BTC-WAXP,왁스,WAX
+KRW-HBAR,헤데라,Hedera
+KRW-MED,메디블록,MediBloc
+BTC-MED,메디블록,MediBloc
+BTC-MLK,밀크,MiL.k
+KRW-MLK,밀크,MiL.k
+KRW-STPT,에스티피,Standard Tokenization Protocol
+BTC-VET,비체인,VeChain
+KRW-ORBS,오브스,Orbs
+BTC-CHZ,칠리즈,Chiliz
+KRW-VET,비체인,VeChain
+BTC-FX,펑션엑스,Function X
+BTC-OGN,오리진프로토콜,Origin Protocol
+KRW-CHZ,칠리즈,Chiliz
+BTC-XTZ,테조스,Tezos
+BTC-HIVE,하이브,Hive
+BTC-HBD,하이브달러,Hive Dollar
+BTC-OBSR,옵저버,Observer
+BTC-DKA,디카르고,dKargo
+KRW-STMX,스톰엑스,StormX
+BTC-STMX,스톰엑스,StormX
+BTC-AHT,아하토큰,AhaToken
+BTC-PCI,페이코인,PayCoin
+KRW-DKA,디카르고,dKargo
+BTC-LINK,체인링크,Chainlink
+KRW-HIVE,하이브,Hive
+KRW-KAVA,카바,Kava
+BTC-KAVA,카바,Kava
+KRW-AHT,아하토큰,AhaToken
+KRW-LINK,체인링크,Chainlink
+KRW-XTZ,테조스,Tezos
+KRW-BORA,보라,BORA
+BTC-JST,저스트,JUST
+BTC-CHR,크로미아,Chromia
+BTC-DAD,다드,DAD
+BTC-TON,톤,TON
+KRW-JST,저스트,JUST
+BTC-CTSI,카르테시,Cartesi
+BTC-DOT,폴카닷,Polkadot
+KRW-CRO,크로노스,Cronos
+BTC-COMP,컴파운드,Compound
+BTC-SXP,스와이프,Swipe
+BTC-HUNT,헌트,HUNT
+KRW-TON,톤,TON
+BTC-ONIT,온버프,ONBUFF
+BTC-CRV,커브,Curve
+BTC-ALGO,알고랜드,Algorand
+BTC-RSR,리저브라이트,Reserve Rights
+KRW-SXP,스와이프,Swipe
+BTC-OXT,오키드,Orchid
+BTC-PLA,플레이댑,PlayDapp
+KRW-HUNT,헌트,HUNT
+BTC-MARO,마로,Maro
+BTC-SAND,샌드박스,The Sandbox
+BTC-SUN,썬,SUN
+KRW-PLA,플레이댑,PlayDapp
+KRW-DOT,폴카닷,Polkadot
+BTC-SRM,세럼,Serum
+BTC-QTCON,퀴즈톡,Quiztok
+BTC-MVL,엠블,MVL
+KRW-SRM,세럼,Serum
+KRW-MVL,엠블,MVL
+BTC-GXC,지엑스체인,GXChain
+BTC-AQT,알파쿼크,Alpha Quark Token
+BTC-AXS,엑시인피니티,Axie Infinity
+BTC-STRAX,스트라티스,Stratis
+KRW-STRAX,스트라티스,Stratis
+KRW-AQT,알파쿼크,Alpha Quark Token
+BTC-GLM,골렘,Golem
+KRW-GLM,골렘,Golem
+BTC-FCT2,피르마체인,FirmaChain
+BTC-SSX,썸씽,SOMESING
+KRW-SSX,썸씽,SOMESING
+KRW-META,메타디움,Metadium
+KRW-FCT2,피르마체인,FirmaChain
+BTC-FIL,파일코인,Filecoin
+BTC-UNI,유니스왑,Uniswap
+BTC-BASIC,베이직,Basic
+BTC-INJ,인젝티브프로토콜,Injective Protocol
+BTC-PROM,프로메테우스,Prometeus
+BTC-VAL,밸리디티,Validity
+BTC-PSG,파리생제르맹,Paris Saint-Germain Fan Token
+BTC-JUV,유벤투스,Juventus Fan Token
+BTC-CBK,코박토큰,Cobak Token
+BTC-FOR,포튜브,ForTube
+KRW-CBK,코박토큰,Cobak Token
+BTC-BFC,바이프로스트,Bifrost
+BTC-LINA,리니어파이낸스,Linear
+BTC-HUM,휴먼스케이프,Humanscape
+BTC-CELO,셀로,Celo
+KRW-SAND,샌드박스,The Sandbox
+KRW-HUM,휴먼스케이프,Humanscape
+BTC-IQ,에브리피디아,Everipedia
+BTC-STX,스택스,Stacks
+KRW-DOGE,도지코인,Dogecoin
+BTC-NEAR,니어프로토콜,NEAR Protocol
+BTC-AUCTION,바운스토큰,Bounce
+BTC-DAWN,던프로토콜,Dawn Protocol
+BTC-FLOW,플로우,Flow
+BTC-STRK,스트라이크,Strike
+KRW-STRK,스트라이크,Strike
+BTC-PUNDIX,펀디엑스,Pundi X
+KRW-PUNDIX,펀디엑스,Pundi X
+KRW-FLOW,플로우,Flow
+KRW-DAWN,던프로토콜,Dawn Protocol
+KRW-AXS,엑시인피니티,Axie Infinity
+KRW-STX,스택스,Stacks
+BTC-GRT,그래프,The Graph
+BTC-SNX,신세틱스,Synthetix
+BTC-USDP,팍스달러,Pax Dollar
+KRW-XEC,이캐시,eCash
+KRW-SOL,솔라나,Solana
+BTC-SOL,솔라나,Solana
+KRW-MATIC,폴리곤,Polygon
+BTC-MATIC,폴리곤,Polygon
+KRW-NU,누사이퍼,Nucypher
+BTC-NU,누사이퍼,Nucypher
+KRW-AAVE,에이브,Aave
+KRW-1INCH,1인치네트워크,1inch Network
+BTC-AAVE,에이브,Aave
+BTC-1INCH,1인치네트워크,1inch Network
+BTC-MASK,마스크네트워크,Mask Network
+KRW-ALGO,알고랜드,Algorand
+BTC-AUDIO,오디우스,Audius
+KRW-NEAR,니어프로토콜,NEAR Protocol
+BTC-YGG,일드길드게임즈,Yield Guild Games
+BTC-GTC,깃코인,Gitcoin
+BTC-OCEAN,오션프로토콜,Ocean Protocol
+BTC-CTC,크레딧코인,Creditcoin
+BTC-LPT,라이브피어,Livepeer
+KRW-WEMIX,위믹스,Wemix
+BTC-WEMIX,위믹스,Wemix
+KRW-AVAX,아발란체,Avalanche
+BTC-AVAX,아발란체,Avalanche
+BTC-IMX,이뮤터블엑스,Immutable X
+BTC-RNDR,렌더토큰,Render Token
+BTC-RLY,랠리,Rally
+KRW-T,쓰레스홀드,Threshold
+BTC-T,쓰레스홀드,Threshold
