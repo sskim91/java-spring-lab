@@ -1,5 +1,7 @@
 package generic;
 
+import java.lang.reflect.Field;
+
 /**
  * Created by sskim on 2022/02/02
  * Github : http://github.com/sskim91
@@ -30,5 +32,13 @@ public class Student<T> {
 
     public <V> V toto2(V id) {
         return id;
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        System.out.println("className = " + Student.class.getName());
+        Field value1 = Student.class.getDeclaredField("value");
+        System.out.println("value1 = " + value1);
+        System.out.println(value1.getType());
     }
 }

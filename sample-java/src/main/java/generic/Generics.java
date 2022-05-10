@@ -1,5 +1,7 @@
 package generic;
 
+import java.util.List;
+
 /**
  * Created by sskim on 2022/02/02
  * Github : http://github.com/sskim91
@@ -14,5 +16,8 @@ public class Generics {
 //        Generics.print1("aa");
 //        Generics.print1(1);
         Student<String> stringStudent = new Student<>();
+
+        List<Integer> integers = List.of(1, 2, 3, 4, 5);
+
     }
 }
