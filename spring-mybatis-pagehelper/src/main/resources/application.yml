@@ -1,0 +1,15 @@
+# set datasource
+spring:
+  datasource:
+    url: jdbc:log4jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: true
+  sql:
+    init:
+      mode: ALWAYS
