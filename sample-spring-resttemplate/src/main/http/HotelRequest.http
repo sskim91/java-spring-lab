@@ -1,0 +1,7 @@
+POST http://127.0.0.1:8080/hotels/123/rooms
+Content-Type: application/json
+
+{
+  "roomNumber": "West-Wing-3928",
+  "roomType": "single"
+}

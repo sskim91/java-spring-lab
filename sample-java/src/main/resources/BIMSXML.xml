@@ -1,0 +1,58 @@
+<BIMSXML>
+    <Nodes>
+        <Node code="정류장코드">
+            <Name></Name>
+            <Label></Label>
+            <Vertices>
+                <Vertex cx="106.797262349" cy="-6.186831281" />
+                <Vertex cx="106.797262349" cy="-6.186831281" />
+            </Vertices>
+        </Node>
+    </Nodes>
+    <Lines>
+        <Line code="라인ID">
+            <Name></Name>
+            <Label></Label>
+            <Routes>
+                <Route code="하행 ROUTE_아이디">
+                    <Name></Name>
+                    <Turn></Turn>
+                    <Direction></Direction>
+                    <Longitud></Longitud>
+                    <Destination></Destination>
+                    <Nodes>
+                        <Node type="" code="정류장코드">
+                            <Position></Position>
+                            <Attribute></Attribute>
+                        </Node>
+                    </Nodes>
+                    <Vertices>
+                        <Vertex cx="106.797262349" cy="-6.186831281" />
+                        <Vertex cx="106.797262349" cy="-6.186831281" />
+                    </Vertices>
+                </Route>
+                <Route code="상행 ROUTE_아이디">
+                    <Nodes>
+                        <Node type="1" code="200000018">
+                            <Position>0</Position>
+                            <Attribute>65</Attribute>
+                        </Node>
+                        <Node type="1" code="200000019">
+                            <Position>64620</Position>
+                            <Attribute>65</Attribute>
+                        </Node>
+                    </Nodes>
+                </Route>
+            </Routes>
+            <Sublines>
+                <Subline code="">
+                    <Label></Label>
+                    <Routes>
+                        <Route code="" order="1" />
+                        <Route code="" order="1" />
+                    </Routes>
+                </Subline>
+            </Sublines>
+        </Line>
+    </Lines>
+</BIMSXML>

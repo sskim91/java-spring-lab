@@ -28,6 +28,11 @@ public class LocalDateExample {
 //        printAllInstant();
 
 //        BetweenDays();
+        String hh24m = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES).format(DateTimeFormatter.ofPattern("HHmm"));
+        System.out.println("hh24m = " + hh24m);
+        LocalDateTime dt = LocalDateTime.now();
+        String hHmm = dt.withMinute((dt.getMinute() / 10) * 10).format(DateTimeFormatter.ofPattern("HHmm"));
+        System.out.println("hHmm = " + hHmm);
     }
 
     /**
