@@ -2,13 +2,20 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.17'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id "com.github.node-gradle.node" version "7.0.1"
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '11'
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+node {
+	version = '18.16.0'
+	download = false
 }
 
 configurations {
@@ -22,14 +29,39 @@ repositories {
 }
 
 dependencies {
+    //spring
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    //config
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    //test
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.register('copyLibrary', Copy) {
+    dependsOn('npmInstall')
+    from "${projectDir}/src/main/resources/static"
+    into "${projectDir}build/resources/main/static/."
+}
+
+build {
+    dependsOn copyLibrary
+}
+
+bootJar {
+    dependsOn copyLibrary
+    archiveFileName = 'boot-npm-in-action'
 }
